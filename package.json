@@ -1,7 +1,7 @@
 {
   "name": "react-mini-games",
   "version": "0.0.1",
-  "description": "Quick setup for new React.js applications featuring Redux, hot–reloading, PostCSS, react-router and Mocha.",
+  "description": "Playing around with react by making mobile games.",
   "dependencies": {
     "fontfaceobserver": "^1.5.1",
     "history": "1.17.0",
@@ -44,6 +44,9 @@
     "postcss-reporter": "^1.2.1",
     "postcss-simple-vars": "^1.0.0",
     "react-transform-hmr": "^1.0.1",
+    "redux-devtools": "^3.0.1",
+    "redux-devtools-dock-monitor": "^1.0.1",
+    "redux-devtools-log-monitor": "^1.0.1",
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.1",

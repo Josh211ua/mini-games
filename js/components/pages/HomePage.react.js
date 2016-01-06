@@ -12,13 +12,13 @@ class HomePage extends Component {
   render() {
     const dispatch = this.props.dispatch;
     const { projectName, ownerName } = this.props.data;
+            // Use this link to find the query options
+        //http://api.bing.com/osjson.aspx?query=hello
     return (
       <div>
-        <h1>Hello World!</h1>
-        <h2>This is the demo for the <span className="home__text--red">{ projectName }</span> by <a href={'https://twitter.com/' + ownerName} >@{ ownerName }</a></h2>
-        <label className="home__label">Change to your project name:
-          <input className="home__input" type="text" onChange={(evt) => { dispatch(asyncChangeProjectName(evt.target.value)); }} defaultValue="React.js Boilerplate" value={projectName} />
-        </label>
+        <h1>Query!</h1>
+        <h2>Type a query into the box below??</h2>
+        <input className="home__input" type="text" onChange={(evt) => { dispatch(asyncChangeProjectName(evt.target.value)); }} defaultValue="React.js Boilerplate" value={projectName} />
         <label className="home__label">Change to your name:
           <input className="home__input" type="text" onChange={(evt) => { dispatch(asyncChangeOwnerName(evt.target.value)); }} defaultValue="mxstbr" value={ownerName} />
         </label>
