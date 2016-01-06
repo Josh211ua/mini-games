@@ -28,6 +28,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { Router, Route } from 'react-router';
+import { syncReduxAndRouter } from 'redux-simple-router';
 import FontFaceObserver from 'fontfaceobserver';
 import createHistory from 'history/lib/createBrowserHistory';
 
@@ -52,12 +53,15 @@ import configureStore from "./store/configureStore";
 import '../css/main.css';
 
 const store = configureStore();
+const history = createHistory();
+
+syncReduxAndRouter(history, store);
 
 // Mostly boilerplate, except for the Routes. These are the pages you can go to,
 // which are all wrapped in the App component, which contains the navigation etc
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={createHistory()}>
+    <Router history={history}>
       <Route component={App}>
         <Route path="/" component={HomePage} /> 
         <Route path="/readme" component={ReadmePage} />
