@@ -1,7 +1,7 @@
 {
-  "name": "react-mini-games",
+  "name": "mini-games",
   "version": "0.0.1",
-  "description": "Playing around with react by making mobile games.",
+  "description": "Playing around with react by making small games.",
   "dependencies": {
     "fontfaceobserver": "^1.5.1",
     "history": "1.17.0",
@@ -54,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/mxstbr/react-boilerplate.git"
+    "url": "git://github.com/Josh211ua/mini-games"
   },
   "scripts": {
     "lint": "eslint .",
