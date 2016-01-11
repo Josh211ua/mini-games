@@ -15,7 +15,7 @@ import "file?name=[name].[ext]!../.htaccess";
 import React from "react";
 import ReactDOM from "react-dom";
 import { Provider } from "react-redux";
-import { Router, Route } from "react-router";
+import { Router } from "react-router";
 import { syncReduxAndRouter } from "redux-simple-router";
 import FontFaceObserver from "fontfaceobserver";
 import createHistory from "history/lib/createBrowserHistory";
@@ -31,8 +31,7 @@ openSansObserver.check().then(() => {
 });
 
 // Import local files
-import NotFoundPage from "./shared/components/NotFound.react";
-import App from "./root/App.react";
+import RootRoute from "./root/rootRoute";
 import configureStore from "./root/configureStore";
 
 // Import the CSS file, which HtmlWebpackPlugin transfers to the build folder
@@ -48,9 +47,7 @@ syncReduxAndRouter(history, store);
 ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
-      <Route component={App}>
-        <Route path="*" component={NotFoundPage} />
-      </Route>
+      {RootRoute}
     </Router>
   </Provider>,
   document.getElementById("app")
