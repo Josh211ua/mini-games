@@ -4,9 +4,14 @@
 // 4. reducer: Redux.Reducer - A reducer for all state in the game
 import React from "react";
 import { Route } from "react-router";
+import { combineReducers } from "redux";
+
 import Demo from "./components/Demo.react";
+import * as reducers from "./reducers";
 
 export const name = "Demo";
 
 // Note top level routes needs keys because they will be put into a child array
 export const route = <Route key="demo" path="/demo" component={Demo} />;
+
+export const reducer = combineReducers(reducers);

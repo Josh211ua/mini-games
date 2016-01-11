@@ -3,7 +3,7 @@ import { Route } from "react-router";
 
 import App from "./App.react";
 import NotFoundPage from "../shared/components/NotFound.react";
-import * as Games from "../games/index";
+import * as Games from "../games";
 
 const routes = [];
 for (const game in Games) {

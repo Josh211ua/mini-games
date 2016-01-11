@@ -1,3 +1,3 @@
-import * as demo from "./demo";
+import * as Demo from "./demo";
 
-export const Demo = demo;
+export const demo = Demo;
