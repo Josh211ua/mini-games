@@ -15,11 +15,25 @@ It is mostly meant as a sandbox to gain experience with these technologies, but 
 
 ## Testing and Linting
 
-Currently tests and lint are not being automatically run on the repository, so make sure they pass before checking in new code.
+Currently tests and lint are not being automatically run on the repository, so make sure they pass before checking in new code. The available commands are:
 
-1. Run all tests with `npm test`
+```Shell
+$ npm run lint
+```
 
-2. Run the linter with `npm run lint`
+Checks your JavaScript coding styles for potential errors and suspicious usage of included functions.
+
+```Shell
+$ npm run test
+```
+
+Lints JavaScript files and tests your application with the unit tests specified in the `test` folder.
+
+```Shell
+$ npm run test:watch
+```
+
+Runs unit tests everytime you change something in your JavaScript code
 
 ## Building & Deploying
 
