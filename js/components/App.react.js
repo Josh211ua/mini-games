@@ -6,10 +6,10 @@
  * contain code that should be seen on all pages. (e.g. navigation bar)
  */
 
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import Logo from '../../img/logo.png';
-import DevTools from './dev/DevTools.react';
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import Logo from "../../img/logo.png";
+import DevTools from "./dev/DevTools.react";
 
 class App extends Component {
   render() {

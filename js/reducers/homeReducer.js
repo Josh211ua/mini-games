@@ -13,12 +13,12 @@
  * add it in the rootReducer.js.
  */
 
-import { CHANGE_OWNER_NAME, CHANGE_PROJECT_NAME } from '../constants/AppConstants';
-import assignToEmpty from '../utils/assign';
+import { CHANGE_OWNER_NAME, CHANGE_PROJECT_NAME } from "../constants/AppConstants";
+import assignToEmpty from "../utils/assign";
 
 const initialState = {
-  projectName: 'React.js Boilerplate',
-  ownerName: 'mxstbr'
+  projectName: "React.js Boilerplate",
+  ownerName: "mxstbr"
 };
 
 function homeReducer(state = initialState, action) {
