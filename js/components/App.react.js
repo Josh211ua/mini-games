@@ -13,7 +13,7 @@ import DevTools from "./dev/DevTools.react";
 
 class App extends Component {
   render() {
-    return (
+      return (
       <div className="wrapper">
         <DevTools />
         <img className="logo" src={Logo} />
@@ -27,9 +27,9 @@ class App extends Component {
 
 // Which props do we want to inject, given the global state?
 function select(state) {
-  return {
-    data: state
-  };
+    return {
+        data: state
+    };
 }
 
 // Wrap the component to inject dispatch and state into it

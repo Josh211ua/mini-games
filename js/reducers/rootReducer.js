@@ -4,7 +4,7 @@
  */
 
 import { combineReducers } from "redux";
-import { routeReducer as routing } from "redux-simple-router"
+import { routeReducer as routing } from "redux-simple-router";
 
 import home from "./homeReducer";
 
@@ -12,8 +12,8 @@ import home from "./homeReducer";
 // import { combineReducers } from "redux";
 // const rootReducer = combineReducers({ homeReducer, yourReducer })
 const rootReducer = combineReducers({
-	home,
-	routing
+    home,
+    routing
 });
 
 export default rootReducer;

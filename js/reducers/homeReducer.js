@@ -17,24 +17,24 @@ import { CHANGE_OWNER_NAME, CHANGE_PROJECT_NAME } from "../constants/AppConstant
 import assignToEmpty from "../utils/assign";
 
 const initialState = {
-  projectName: "React.js Boilerplate",
-  ownerName: "mxstbr"
+    projectName: "React.js Boilerplate",
+    ownerName: "mxstbr"
 };
 
 function homeReducer(state = initialState, action) {
-  Object.freeze(state); // Don't mutate state directly, always use assign()!
-  switch (action.type) {
+    Object.freeze(state); // Don't mutate state directly, always use assign()!
+    switch (action.type) {
     case CHANGE_OWNER_NAME:
-      return assignToEmpty(state, {
-        ownerName: action.name
-      });
+        return assignToEmpty(state, {
+            ownerName: action.name
+        });
     case CHANGE_PROJECT_NAME:
-      return assignToEmpty(state, {
-        projectName: action.name
-      });
+        return assignToEmpty(state, {
+            projectName: action.name
+        });
     default:
-      return state;
-  }
+        return state;
+    }
 }
 
 export default homeReducer;

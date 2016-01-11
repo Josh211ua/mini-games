@@ -25,9 +25,9 @@ const openSansObserver = new FontFaceObserver("Open Sans", {});
 
 // When Open Sans is loaded, add the js-open-sans-loaded class to the body
 openSansObserver.check().then(() => {
-  document.body.classList.add("js-open-sans-loaded");
+    document.body.classList.add("js-open-sans-loaded");
 }, () => {
-  document.body.classList.remove("js-open-sans-loaded");
+    document.body.classList.remove("js-open-sans-loaded");
 });
 
 // Import the pages
@@ -51,7 +51,7 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route component={App}>
-        <Route path="/" component={HomePage} /> 
+        <Route path="/" component={HomePage} />
         <Route path="/readme" component={ReadmePage} />
         <Route path="*" component={NotFoundPage} />
       </Route>
