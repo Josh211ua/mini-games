@@ -8,7 +8,6 @@
 
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import Logo from "../../img/logo.png";
 import DevTools from "../shared/components/DevTools.react";
 
 class App extends Component {
@@ -16,7 +15,6 @@ class App extends Component {
       return (
       <div className="wrapper">
         <DevTools />
-        <img className="logo" src={Logo} />
         { this.props.children }
       </div>
     );
