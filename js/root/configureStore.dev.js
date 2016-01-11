@@ -2,8 +2,8 @@ import { applyMiddleware, createStore, compose } from "redux";
 // import { persistState } from "redux-devtools";
 import reduxThunk from "redux-thunk";
 
-import DevTools from "../components/dev/DevTools.react";
-import rootReducer from "../reducers/rootReducer";
+import DevTools from "../shared/components/DevTools.react";
+import rootReducer from "./rootReducer";
 
 const createStoreWithMiddleware = compose(
 	applyMiddleware(reduxThunk),
@@ -15,8 +15,8 @@ export default function configureStore(initialState) {
 
 	// Make reducers hot reloadable, see http://stackoverflow.com/questions/34243684/make-redux-reducers-and-other-non-components-hot-loadable
     if (module.hot) {
-        module.hot.accept("../reducers/rootReducer", () => {
-            const nextRootReducer = require("../reducers/rootReducer").default;
+        module.hot.accept("./rootReducer", () => {
+            const nextRootReducer = require("./rootReducer").default;
             store.replaceReducer(nextRootReducer);
         });
     }

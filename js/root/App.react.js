@@ -9,7 +9,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Logo from "../../img/logo.png";
-import DevTools from "./dev/DevTools.react";
+import DevTools from "../shared/components/DevTools.react";
 
 class App extends Component {
   render() {

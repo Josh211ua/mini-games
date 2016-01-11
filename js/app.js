@@ -30,12 +30,10 @@ openSansObserver.check().then(() => {
     document.body.classList.remove("js-open-sans-loaded");
 });
 
-// Import the pages
-import HomePage from "./components/pages/HomePage.react";
-import ReadmePage from "./components/pages/ReadmePage.react";
-import NotFoundPage from "./components/pages/NotFound.react";
-import App from "./components/App.react";
-import configureStore from "./store/configureStore";
+// Import local files
+import NotFoundPage from "./shared/components/NotFound.react";
+import App from "./root/App.react";
+import configureStore from "./root/configureStore";
 
 // Import the CSS file, which HtmlWebpackPlugin transfers to the build folder
 import "../css/main.css";
@@ -51,8 +49,6 @@ ReactDOM.render(
   <Provider store={store}>
     <Router history={history}>
       <Route component={App}>
-        <Route path="/" component={HomePage} />
-        <Route path="/readme" component={ReadmePage} />
         <Route path="*" component={NotFoundPage} />
       </Route>
     </Router>
